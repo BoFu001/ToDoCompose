@@ -10,6 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ChainStyle
 import androidx.constraintlayout.compose.ConstraintLayout
 import com.example.todocompose.ui.theme.ToDoComposeTheme
@@ -49,7 +50,7 @@ fun TestConstraintLayout(){
         Button(
             onClick = { println("aaaaa btn2")},
             modifier = Modifier.constrainAs(btn2){
-                bottom.linkTo(parent.bottom)
+                bottom.linkTo(guidelineFromBottom)
             }
         ){
             Text(text = "Btn2")
@@ -58,7 +59,7 @@ fun TestConstraintLayout(){
         Button(
             onClick = { println("aaaaa btn3")},
             modifier = Modifier.constrainAs(btn3){
-                bottom.linkTo(parent.bottom)
+                bottom.linkTo(guidelineFromBottom)
             }
         ){
             Text(text = "Btn3")
